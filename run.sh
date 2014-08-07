@@ -45,9 +45,9 @@ change_source_dir() {
 create_s3_website_yml_file() {
 
   cat > s3_website.yml <<EOF
-s3_id: $WERCKER_S3_WEBSITE_S3_KEY
-s3_secret: $WERCKER_S3_WEBSITE_S3_SECRET
-s3_bucket: $WERCKER_S3_WEBSITE_S3_BUCKET
+s3_id: $WERCKER_S3_WEBSITE_KEY
+s3_secret: $WERCKER_S3_WEBSITE_SECRET
+s3_bucket: $WERCKER_S3_WEBSITE_BUCKET
 s3_endpoint: eu-west-1
 max_age: 300
 gzip:
