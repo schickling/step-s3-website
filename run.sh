@@ -33,7 +33,7 @@ install_s3_website() {
 }
 
 change_source_dir() {
-  SOURCE_DIR="$WERCKER_ROOT/$WERCKER_S3SYNC_SOURCE_DIR";
+  SOURCE_DIR="$WERCKER_ROOT/$WERCKER_S3_WEBSITE_SOURCE_DIR";
   if cd "$SOURCE_DIR" ;
   then
     debug "changed directory $SOURCE_DIR, content is: $(ls -l)";
@@ -81,7 +81,7 @@ debug "$CMD";
 CMD_OUTPUT=$($CMD);
 
 if [[ $? -ne 0 ]]; then
-  warning $CMD_OUTPUT;
+  info "$CMD_OUTPUT";
   fail 's3_website push failed';
 else
   success 'finished synchronisation';
