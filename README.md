@@ -9,7 +9,7 @@ Wercker step to deploy static websites to S3/Cloudfront using s3_website
 deploy:
   steps:
     - schickling/s3-website:
-      key: $KEY
-      secret: $SECRET
-      bucket: $BUCKET
+        key: $KEY
+        secret: $SECRET
+        bucket: $BUCKET
 ```
