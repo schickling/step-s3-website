@@ -75,15 +75,4 @@ create_s3_website_yml_file;
 
 info 'starting synchronisation';
 
-set +e;
-CMD="s3_website push --site .";
-debug "$CMD";
-CMD_OUTPUT=$($CMD);
-
-if [[ $? -ne 0 ]]; then
-  info "$CMD_OUTPUT";
-  fail 's3_website push failed';
-else
-  success 'finished synchronisation';
-fi
-set -e;
+s3_website push --site .
