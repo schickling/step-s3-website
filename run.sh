@@ -29,7 +29,7 @@ install_ruby() {
 }
 
 install_s3_website() {
-  gem install s3_website;
+  sudo gem install s3_website;
 }
 
 change_source_dir() {
