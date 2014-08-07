@@ -2,19 +2,19 @@
 set -e;
 
 init_wercker_environment_variables() {
-  if [ ! -n "$WERCKER_S3_WEBSITE_S3_KEY" ]
+  if [ ! -n "$WERCKER_S3_WEBSITE_KEY" ]
   then
-    fail 'missing or empty option s3.key, please check wercker.yml';
+    fail 'missing or empty option key, please check wercker.yml';
   fi
 
-  if [ ! -n "$WERCKER_S3_WEBSITE_S3_SECRET" ]
+  if [ ! -n "$WERCKER_S3_WEBSITE_SECRET" ]
   then
-    fail 'missing or empty option s3.secret, please check wercker.yml';
+    fail 'missing or empty option secret, please check wercker.yml';
   fi
 
-  if [ ! -n "$WERCKER_S3_WEBSITE_S3_BUCKET" ]
+  if [ ! -n "$WERCKER_S3_WEBSITE_BUCKET" ]
   then
-    fail 'missing or empty option s3.bucket, please check wercker.yml';
+    fail 'missing or empty option bucket, please check wercker.yml';
   fi
 }
 
