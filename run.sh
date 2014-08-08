@@ -75,5 +75,5 @@ create_s3_website_yml_file;
 
 info 'starting synchronisation';
 
-yes n | s3_website cfg apply
+s3_website cfg apply --headless
 s3_website push --site .
