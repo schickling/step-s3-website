@@ -16,6 +16,11 @@ init_wercker_environment_variables() {
   then
     fail 'missing or empty option bucket, please check wercker.yml';
   fi
+
+  if [ ! -n "$WERCKER_S3_WEBSITE_REGION" ]
+  then
+    fail 'missing or empty option region, please check wercker.yml';
+  fi
 }
 
 install_java() {
@@ -48,7 +53,7 @@ create_s3_website_yml_file() {
 s3_id: $WERCKER_S3_WEBSITE_KEY
 s3_secret: $WERCKER_S3_WEBSITE_SECRET
 s3_bucket: $WERCKER_S3_WEBSITE_BUCKET
-s3_endpoint: eu-west-1
+s3_endpoint: $WERCKER_S3_WEBSITE_REGION
 max_age: 300
 gzip:
 - .html
