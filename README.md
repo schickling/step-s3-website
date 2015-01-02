@@ -12,4 +12,5 @@ deploy:
         key: $KEY
         secret: $SECRET
         bucket: $BUCKET
+        region: eu-west-1
 ```
