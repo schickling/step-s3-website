@@ -30,7 +30,7 @@ install_java() {
 
 install_ruby() {
   sudo apt-get update;
-  sudo apt-get install -y ruby1.9.1 rubygems1.9.1;
+  sudo apt-get install -y ruby rubygems;
 }
 
 install_s3_website() {
