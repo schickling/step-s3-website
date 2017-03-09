@@ -65,6 +65,10 @@ gzip:
 - .woff
 exclude_from_upload:
 - .DS_Store
+- .git
+- .gitignore
+- .md
+- .yml
 EOF
 
 }
